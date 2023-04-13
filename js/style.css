@@ -3,7 +3,7 @@
     font-family: 'Oswald', Helvetica, sans-serif;
     font-size: 40px;
     transform: skewY(-10deg);
-    letter-spacing: -8deg;
+    word-spacing: -8deg;
     color: tomato;
     text-shadow:
     -1px -1px 0 firebrick,
