@@ -42,3 +42,50 @@
 // button.addEventListener("click", function() {
 //     console.log("click!!!")
 // })
+
+
+// *** creat new li by JS///
+// var button = document.getElementById("enter");
+// var input = document.getElementById("userinput");
+// var ul = document.querySelector("ul");
+
+// button.addEventListener("click", function() {
+//     if (input.value.length > 0) {
+//         var li = document.createElement("li");
+//         li.appendChild(document.createTextNode(input.value))
+//         ul.appendChild(li);
+//         input.value ="";
+//     }
+// })
+
+// *** creat new li by JS 2nd method shoping lisht product add///
+
+var button = document.getElementById("enter");
+var input = document.getElementById("userinput");
+var ul = document.querySelector("ul");
+
+function inputLength() {
+    return input.value.lenght;
+}
+
+function creatListElement() {
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(input.value));
+    ul.appendChild(li);
+    input.value = "";
+}
+
+function addListAfterClick() {
+    if (inputLength() > 0) {
+        creatListElement();
+    }
+}
+
+function addListAfterKeypress(event) {
+    if(inputLength() > 0 && event.keyCode === 13) {
+        creatListElement();
+    }
+}
+
+button.addEventListener("click", addListAfterClick);
+input.addEventListener("keypress", addListAfterKeypress);
